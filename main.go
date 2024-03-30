@@ -20,7 +20,14 @@ func main() {
 	}
 
 	userNote.Display()
-	userNote.Save()
+	err = userNote.Save()
+
+	if err != nil {
+		fmt.Println("Saving the note failed")
+		return
+	}
+
+	fmt.Println("Saving the node succeeded!")
 
 }
 
