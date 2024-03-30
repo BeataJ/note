@@ -20,6 +20,7 @@ func main() {
 	}
 
 	userNote.Display()
+	userNote.Save()
 
 }
 
@@ -32,7 +33,7 @@ func getNoteData() (string, string) {
 }
 
 func getUserInput(prompt string) string {
-	fmt.Print(prompt)
+	fmt.Printf("%v ", prompt)
 
 	reader := bufio.NewReader(os.Stdin)
 
